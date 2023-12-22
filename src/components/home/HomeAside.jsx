@@ -1,5 +1,3 @@
-import Search from "./search";
-
 export default function HomeAside() {
   return (
     <div className="bg-white rounded-lg w-72 h-screen ">
