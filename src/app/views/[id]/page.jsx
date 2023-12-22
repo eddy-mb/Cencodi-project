@@ -3,22 +3,20 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 
 export default function ViewsPage({ params }) {
-  
   const [item, setItem] = useState([]);
 
-  if (params) {
-    useEffect(() => {
-      fetch(`/api/${params.id}`, {
-        method: "GET",
-        headers: { "Content-Type": "application/json" },
-      })
-        .then((res) => res.json())
-        .then((obj) => {
-          const data = obj.data;
-          setItem(data);
-        });
-    }, []);
-  }
+  useEffect(() => {
+    fetch(`/api/${params.id}`, {
+      method: "GET",
+      headers: { "Content-Type": "application/json" },
+    })
+      .then((res) => res.json())
+      .then((obj) => {
+        const data = obj.data;
+        setItem(data);
+      });
+  }, []);
+
   return (
     <div className=" bg-white h-min p-2 rounded-lg space-y-1 w-80">
       <div>
