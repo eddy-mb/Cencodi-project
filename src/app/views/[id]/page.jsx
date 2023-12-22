@@ -1,7 +1,7 @@
 "use client";
-import { useEffect } from "react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
+
 export default function ViewPage({ params }) {
   const [item, setItem] = useState([]);
 
