@@ -30,7 +30,7 @@ export default function HomeCard() {
       <div className="flex flex-wrap">
         {item.map((res) => (
           <div
-            key={res.id}
+            key={res.pk}
             className=" bg-white h-min p-2 rounded-lg space-y-1 w-80">
             <div>
               <Image

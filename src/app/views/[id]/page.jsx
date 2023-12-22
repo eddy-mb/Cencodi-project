@@ -2,7 +2,8 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 
-export default function ViewPage({ params }) {
+export default function ViewsPage({ params }) {
+  
   const [item, setItem] = useState([]);
 
   if (params) {
